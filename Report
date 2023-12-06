@@ -1,0 +1,77 @@
+Deep Learning Models for Human Activity Recognition
+
+Introduction
+The goal of this project was to implement and compare two deep learning models, Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN), for the task of Human Activity Recognition (HAR) using the UCI HAR Dataset.
+The report covers aspects related to the dataset, preprocessing steps, model architectures, training details, results, observations, conclusions, and challenges faced during the implementation.
+
+Dataset and Preprocessing
+Dataset
+The UCI HAR Dataset consists of accelerometer and gyroscope sensor readings collected from smartphones during various human activities, such as walking, sitting, and standing.
+
+Preprocessing
+Loading Data: The dataset was loaded into NumPy arrays for both training and testing sets.
+Standardization: Sensor readings were standardized using StandardScaler to ensure consistent feature scaling.
+Label Encoding: Activity labels were encoded using LabelEncoder to convert categorical labels into numerical format.
+
+
+Certainly! Below is a sample report based on the provided code. Please note that this is a generic report, and you may need to customize it based on the specific details of your implementation and dataset.
+
+Deep Learning Models for Human Activity Recognition
+Introduction
+The goal of this project was to implement and compare two deep learning models, Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN), for the task of Human Activity Recognition (HAR) using the UCI HAR Dataset. The report covers aspects related to the dataset, preprocessing steps, model architectures, training details, results, observations, conclusions, and challenges faced during the implementation.
+
+Dataset and Preprocessing
+Dataset
+The UCI HAR Dataset consists of accelerometer and gyroscope sensor readings collected from smartphones during various human activities, such as walking, sitting, and standing.
+
+Preprocessing
+Loading Data: The dataset was loaded into NumPy arrays for both training and testing sets.
+Standardization: Sensor readings were standardized using StandardScaler to ensure consistent feature scaling.
+Label Encoding: Activity labels were encoded using LabelEncoder to convert categorical labels into numerical format.
+Implementation and Architectures
+Convolutional Neural Network (CNN)
+The CNN architecture comprised:
+
+One-dimensional Convolutional layer with 32 filters and a kernel size of 3.
+MaxPooling layer with a pool size of 2.
+Flatten layer to convert the 2D output to a 1D vector.
+Dense layers with ReLU activation.
+Output layer with softmax activation for multi-class classification.
+
+Recurrent Neural Network (RNN)
+The RNN architecture comprised:
+
+Long Short-Term Memory (LSTM) layer with 50 units.
+Dense layers with ReLU activation.
+Output layer with softmax activation.
+
+Training Details
+Both models were trained for 10 epochs with default parameters:
+
+Adam optimizer and sparse categorical cross-entropy loss for model compilation.
+Validation data was used to monitor and prevent overfitting.
+
+Results, Observations, Conclusions
+Results
+CNN Model Accuracy: 0.9539
+RNN Model Accuracy: 0.7655
+
+Observations
+The CNN model exhibited a higher accuracy compared to the RNN model.
+Both models demonstrated a consistent increase in accuracy during training epochs.
+
+Conclusions
+The CNN model, leveraging spatial information, outperformed the RNN model for this HAR task.
+Both models successfully learned and generalized from the training data.
+
+Challenges and Solutions
+Challenge: UnboundLocalError during model evaluation.
+
+Solution: Corrected variable scoping and return statements in the evaluation function.
+Challenge: Difficulty interpreting confusion matrices.
+
+Solution: Utilized visualization tools, such as Seaborn, to enhance the interpretability of confusion matrices.
+
+Recommendations
+Further hyperparameter tuning and experimentation with different architectures may improve model performance.
+Exploring advanced techniques, such as ensemble methods, could enhance the overall accuracy and robustness of the models.
